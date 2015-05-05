@@ -1,0 +1,25 @@
+<!-- views/pages/singlePost.ejs -->
+
+<% include ../partials/header %>
+<% include ../partials/nav %>
+
+<section class="success content first" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2><%= myPost.title %></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                Author: <%= myPost.username %> 
+                Post Date:  <% date = new Date(myPost.postdate) %><%= date.toDateString() %>
+                </div>
+            	<div class="col-lg-12 ">
+                    <%= myPost.postbody %>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<% include ../partials/footer %>

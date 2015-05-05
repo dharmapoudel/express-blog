@@ -1,0 +1,39 @@
+<!-- views/pages/index.ejs -->
+
+<% include ../partials/header %>
+<% include ../partials/nav %>
+<section class="success content first" >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h2><span class="fa fa-sign-in"></span>  <%= tagline %></h2>
+                <!-- LOGIN FORM -->
+				<form action="/signup" method="post">
+					<div class="form-group">
+						<label>Name</label>
+						<input type="text" required class="form-control" name="name">
+					</div>
+					<div class="form-group">
+						<label>Email</label>
+						<input type="email" required class="form-control" name="email">
+					</div>
+					<div class="form-group">
+						<label>Username</label>
+						<input type="text"  required class="form-control" name="username">
+					</div>
+					<div class="form-group">
+						<label>Password</label>
+						<input type="password" required class="form-control" name="password">
+					</div>
+
+					<button type="submit" class="btn btn-warning btn-lg">Signup</button>
+				</form>
+
+				<hr>
+
+				<p>Already have an account? <a href="/login">Login</a> Or go <a href="/">home</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<% include ../partials/footer %>

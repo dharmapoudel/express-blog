@@ -1,0 +1,23 @@
+<!-- views/pages/listPost.ejs -->
+
+<% include ../partials/header %>
+<% include ../partials/nav %>
+
+<section class="success content first" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2><%= tagline || '' %></h2>
+                </div>
+            </div>
+            <div class="row">
+            <% blogPosts.forEach(function(post){ %>
+            	<div class="col-lg-12 ">
+                    <a href="/posts/<%= post._id %>" ><%= post.title %></a>
+                </div>
+            <% }); %>
+            </div>
+        </div>
+    </section>
+
+<% include ../partials/footer %>

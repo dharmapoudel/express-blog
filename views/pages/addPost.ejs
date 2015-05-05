@@ -1,0 +1,30 @@
+<% include ../partials/header %>
+<% include ../partials/nav %>
+<section class="success content first" >
+    <div class="container">
+        <div class="row">
+               <div class="col-sm-6 col-sm-offset-3">
+                <h2><%= tagline %></h2>
+                <!-- ADD NEW POST FORM -->
+				<form action="/posts" method="post">
+					<div class="form-group">
+						<label>Title</label>
+						<input type="text" required class="form-control" name="title">
+					</div>
+					<div class="form-group">
+						<label>Body</label>
+						<textarea required class="form-control" name="postbody">
+
+						</textarea>
+					</div>
+			
+					<button type="submit" class="btn btn-warning btn-lg">Add Post</button>
+				</form>
+
+				<hr>
+
+            </div>
+        </div>
+    </div>
+</section>
+<% include ../partials/footer %>
